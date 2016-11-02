@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="GetEmployeeByUniqueDeptId" type="RestService" springFile="GetEmployeeByUniqueDeptId.spring.xml">
+    <operation name="invoke">
+        <parameter name="deptid" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="GetEmployeeByUniqueDeptId.RootResponse" isList="false"/>
+    </operation>
+    <dataobjects>
+        <dataobject javaType="GetEmployeeByUniqueDeptId.RootResponse" name="RootResponse" supportsQuickData="false">
+            <element name="address" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="departments" typeRef="GetEmployeeByUniqueDeptId.departments" isList="false" allowNull="false"/>
+            <element name="deptId" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="empId" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="firstName" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="lastName" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="profilePic" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="GetEmployeeByUniqueDeptId.departments" name="departments" supportsQuickData="false">
+            <element name="deptCode" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="deptId" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="deptName" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+    </dataobjects>
+</service>

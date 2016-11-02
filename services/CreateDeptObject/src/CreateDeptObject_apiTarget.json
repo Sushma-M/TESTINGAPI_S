@@ -1,0 +1,159 @@
+{
+  "tags" : [ {
+    "description" : "Rest service swagger documentation",
+    "name" : "RestServiceVirtualController"
+  } ],
+  "basePath" : "${rest.CreateDeptObject.basepath}",
+  "paths" : {
+    "/TESTINGAPI_S/services/hrdb/Department" : {
+      "x-WM-BASE_PATH" : "/TESTINGAPI_S/services/hrdb/Department",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "post" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "parameters" : [ {
+          "schema" : {
+            "$ref" : "#/definitions/RootRequest"
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Object",
+          "description" : "RequestBody",
+          "name" : "RequestBody",
+          "required" : false,
+          "in" : "body"
+        } ],
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            },
+            "description" : "Success"
+          }
+        },
+        "operationId" : "CreateDeptObject_RestServiceVirtualController-invoke"
+      },
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.CreateDeptObject.scheme}://${rest.CreateDeptObject.host}${rest.CreateDeptObject.basepath}/TESTINGAPI_S/services/hrdb/Department"
+    }
+  },
+  "host" : "${rest.CreateDeptObject.host}",
+  "schemes" : [ "${rest.CreateDeptObject.scheme}" ],
+  "swagger" : "2.0",
+  "definitions" : {
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "CreateDeptObject.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "tenantId" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "budget" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "q2" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "location" : {
+          "type" : "string"
+        },
+        "q1" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "q4" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "q3" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "deptCode" : {
+          "type" : "string"
+        },
+        "deptId" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "employees" : {
+          "x-WM-IS_LIST" : true,
+          "items" : {
+            "$ref" : "#/definitions/java.lang.Object"
+          },
+          "uniqueItems" : false,
+          "type" : "array"
+        }
+      }
+    },
+    "RootRequest" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "CreateDeptObject.RootRequest",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "tenantId" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "budget" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "q2" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "location" : {
+          "type" : "string"
+        },
+        "q1" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "q4" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "q3" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "deptCode" : {
+          "type" : "string"
+        },
+        "deptId" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "employees" : {
+          "x-WM-IS_LIST" : true,
+          "items" : {
+            "$ref" : "#/definitions/java.lang.Object"
+          },
+          "uniqueItems" : false,
+          "type" : "array"
+        }
+      }
+    },
+    "java.lang.Object" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "CreateDeptObject.java.lang.Object",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    }
+  },
+  "info" : {
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "cd4751be-8e9c-4cf5-a25a-233de816d83c",
+    "x-WM-USE_PROXY_FOR_WEB" : false,
+    "x-WM-SERVICE_ID" : "wavemakeronline",
+    "x-WM-USE_PROXY_FOR_MOBILE" : false,
+    "version" : "2.0"
+  }
+}

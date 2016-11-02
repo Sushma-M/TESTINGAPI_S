@@ -1,0 +1,111 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "2.0",
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "ef533bfb-76cf-4b47-b353-532ac82d99ba",
+    "x-WM-USE_PROXY_FOR_WEB" : false,
+    "x-WM-SERVICE_ID" : "wavemakeronline",
+    "x-WM-USE_PROXY_FOR_MOBILE" : false
+  },
+  "host" : "www.wavemakeronline.com",
+  "basePath" : "/run-8r4sy6c58m",
+  "tags" : [ {
+    "name" : "RestServiceVirtualController",
+    "description" : "Rest service swagger documentation"
+  } ],
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/TESTINGAPI_S/services/API_TESTING_DB/Employee/{id]" : {
+      "put" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "operationId" : "UpdateEmployee_RestServiceVirtualController-invoke",
+        "consumes" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "RequestBody",
+          "description" : "RequestBody",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/RootRequest"
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Object"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            }
+          }
+        },
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "x-WM-BASE_PATH" : "/TESTINGAPI_S/services/API_TESTING_DB/Employee/{id]",
+      "x-WM-COMPLETE_PATH" : "${rest.UpdateEmployee.scheme}://${rest.UpdateEmployee.host}${rest.UpdateEmployee.basepath}/TESTINGAPI_S/services/API_TESTING_DB/Employee/{id]",
+      "x-WM-RELATIVE_PATH" : ""
+    }
+  },
+  "definitions" : {
+    "RootRequest" : {
+      "properties" : {
+        "lastName" : {
+          "type" : "string"
+        },
+        "address" : {
+          "type" : "string"
+        },
+        "empId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "profilePic" : {
+          "type" : "string"
+        },
+        "departments" : {
+          "type" : "string"
+        },
+        "firstName" : {
+          "type" : "string"
+        },
+        "deptId" : {
+          "type" : "integer",
+          "format" : "int32"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "UpdateEmployee.RootRequest",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "RootResponse" : {
+      "properties" : {
+        "lastName" : {
+          "type" : "string"
+        },
+        "address" : {
+          "type" : "string"
+        },
+        "empId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "profilePic" : {
+          "type" : "string"
+        },
+        "departments" : {
+          "type" : "string"
+        },
+        "firstName" : {
+          "type" : "string"
+        },
+        "deptId" : {
+          "type" : "integer",
+          "format" : "int32"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "UpdateEmployee.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    }
+  }
+}

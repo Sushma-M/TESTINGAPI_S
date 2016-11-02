@@ -1,0 +1,86 @@
+{
+  "tags" : [ {
+    "description" : "Rest service swagger documentation",
+    "name" : "RestServiceVirtualController"
+  } ],
+  "basePath" : "${rest.GetProductDetailsOne2One.basepath}",
+  "paths" : {
+    "/TESTINGAPI_S/services/API_TESTING_DB/ProductDetails/{productId}" : {
+      "x-WM-BASE_PATH" : "/TESTINGAPI_S/services/API_TESTING_DB/ProductDetails/{productId}",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "get" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "parameters" : [ {
+          "name" : "productId",
+          "type" : "string",
+          "required" : true,
+          "in" : "path"
+        } ],
+        "consumes" : [ "text/xml" ],
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            },
+            "description" : "Success"
+          }
+        },
+        "operationId" : "GetProductDetailsOne2One_RestServiceVirtualController-invoke"
+      },
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.GetProductDetailsOne2One.scheme}://${rest.GetProductDetailsOne2One.host}${rest.GetProductDetailsOne2One.basepath}/TESTINGAPI_S/services/API_TESTING_DB/ProductDetails/{productId}"
+    }
+  },
+  "host" : "${rest.GetProductDetailsOne2One.host}",
+  "schemes" : [ "${rest.GetProductDetailsOne2One.scheme}" ],
+  "swagger" : "2.0",
+  "definitions" : {
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetProductDetailsOne2One.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "productDesc" : {
+          "type" : "string"
+        },
+        "price" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "rating" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "products" : {
+          "$ref" : "#/definitions/products"
+        },
+        "productId" : {
+          "format" : "int32",
+          "type" : "integer"
+        }
+      }
+    },
+    "products" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetProductDetailsOne2One.products",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "productName" : {
+          "type" : "string"
+        },
+        "productId" : {
+          "format" : "int32",
+          "type" : "integer"
+        }
+      }
+    }
+  },
+  "info" : {
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "6dd69bf7-4efc-400d-a92b-1e5b0dc3397d",
+    "x-WM-USE_PROXY_FOR_WEB" : false,
+    "x-WM-SERVICE_ID" : "wavemakeronline",
+    "x-WM-USE_PROXY_FOR_MOBILE" : false,
+    "version" : "2.0"
+  }
+}

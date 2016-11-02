@@ -1,0 +1,18 @@
+{
+  "endpointAddress" : "https://www.wavemakeronline.com/run-8r4sy6c58m/TESTINGAPI_S/services/hrdb/Department",
+  "method" : "POST",
+  "contentType" : "application/json",
+  "requestBody" : "{\n\t\"deptId\": 34,\n\t\"name\": \"Testing\",\n\t\"budget\": 89876,\n\t\"q1\": 65886,\n\t\"q2\": 67888,\n\t\"q3\": 65764,\n\t\"q4\": 79687,\n\t\"deptCode\": \"TS12\",\n\t\"location\": \"sample\",\n\t\"tenantId\": 1,\n\t\"employees\": []\n}",
+  "authType" : "NONE",
+  "headers" : { },
+  "queryParams" : { },
+  "sampleRestResponse" : {
+    "responseBody" : "{\"deptId\":14,\"name\":\"Testing\",\"budget\":89876,\"q1\":65886,\"q2\":67888,\"q3\":65764,\"q4\":79687,\"deptCode\":\"TS12\",\"location\":\"sample\",\"tenantId\":1,\"employees\":[]}",
+    "convertedResponse" : null,
+    "statusCode" : 0,
+    "responseHeaders" : null,
+    "contentType" : null,
+    "cookies" : null
+  },
+  "redirectEnabled" : true
+}

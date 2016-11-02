@@ -1,0 +1,18 @@
+{
+  "endpointAddress" : "https://www.wavemakeronline.com/run-8r4sy6c58m/TESTINGAPI_S/services/hrdb/Department",
+  "method" : "GET",
+  "contentType" : "text/xml",
+  "requestBody" : "",
+  "authType" : "NONE",
+  "headers" : { },
+  "queryParams" : { },
+  "sampleRestResponse" : {
+    "responseBody" : "{\"totalElements\":5,\"totalPages\":1,\"first\":true,\"sort\":null,\"numberOfElements\":5,\"last\":true,\"size\":20,\"number\":0,\"content\":[{\"deptId\":1,\"name\":\"Engineering\",\"budget\":1936760,\"q1\":445455,\"q2\":522925,\"q3\":426087,\"q4\":542293,\"deptCode\":\"Eng\",\"location\":\"San Francisco\",\"tenantId\":1,\"employees\":null},{\"deptId\":2,\"name\":\"Marketing\",\"budget\":1129777,\"q1\":225955,\"q2\":271146,\"q3\":327635,\"q4\":305040,\"deptCode\":\"Mktg\",\"location\":\"New York\",\"tenantId\":1,\"employees\":null},{\"deptId\":3,\"name\":\"General and Admin\",\"budget\":1452570,\"q1\":435771,\"q2\":290514,\"q3\":348617,\"q4\":377668,\"deptCode\":\"G&A\",\"location\":\"San Francisco\",\"tenantId\":1,\"employees\":null},{\"deptId\":4,\"name\":\"Sales\",\"budget\":2743744,\"q1\":493874,\"q2\":658499,\"q3\":713373,\"q4\":877998,\"deptCode\":\"Sales\",\"location\":\"Austin\",\"tenantId\":1,\"employees\":null},{\"deptId\":5,\"name\":\"Professional Services\",\"budget\":806984,\"q1\":201746,\"q2\":201746,\"q3\":177536,\"q4\":225955,\"deptCode\":\"PS\",\"location\":\"San Francisco\",\"tenantId\":2,\"employees\":null}]}",
+    "convertedResponse" : null,
+    "statusCode" : 0,
+    "responseHeaders" : null,
+    "contentType" : null,
+    "cookies" : null
+  },
+  "redirectEnabled" : true
+}

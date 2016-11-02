@@ -1,0 +1,88 @@
+<wm-page data-ng-controller="EmployeePageController" pagetitle="Employee" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-tabs name="tabs1">
+                <wm-tabpane name="tabpane1" title="Dept Data(With Unique Key)">
+                    <wm-composite name="composite1">
+                        <wm-label class="col-md-3 control-label" name="label1" caption="Select Dept"></wm-label>
+                        <wm-container class="col-md-9" name="container1">
+                            <wm-select name="select_Dept" dataset="bind:Variables.GetDeptDataForUniqueKeyInvoke.dataSet.content" datafield="deptId" displayfield="deptName" displayexpression="bind:$[content[$i].deptId]+' '+$[content[$i].deptName]"></wm-select>
+                        </wm-container>
+                    </wm-composite>
+                    <wm-grid title="" dataset="bind:Variables.GetEmployeeByUniqueDeptIdInvoke.dataSet" navigation="None" name="grid_GetEmp">
+                        <wm-grid-column binding="lastName" caption="Last Name" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="address" caption="Address" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="profilePic" caption="Profile Pic" type="string" widget-type="image" readonly="true" edit-widget-type="text" show="true"><img data-ng-src="{{row.getProperty('profilePic')}}" alt="{{row.getProperty('profilePic')}}" class="" data-ng-class="">
+                        </wm-grid-column>
+                        <wm-grid-column binding="empId" caption="Emp Id" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="departments.deptName" caption="Departments Dept Name" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="departments.deptCode" caption="Departments Dept Code" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="departments.deptId" caption="Departments Dept Id" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="firstName" caption="First Name" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="deptId" caption="Dept Id" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                    </wm-grid>
+                </wm-tabpane>
+                <wm-tabpane name="tabpane2" title="Products(With One2One)">
+                    <wm-composite name="composite2">
+                        <wm-label class="col-md-3 control-label" name="label2" caption="Products"></wm-label>
+                        <wm-container class="col-md-9" name="container2">
+                            <wm-radioset height="auto" name="radioset_Products" dataset="bind:Variables.SV_GetProducts.dataSet.content" datafield="productId" displayfield="productName"></wm-radioset>
+                        </wm-container>
+                    </wm-composite>
+                    <wm-grid title="" dataset="bind:Variables.SV_GetProductDetailsByProductId.dataSet" navigation="Pager" name="grid_GetProductDesc">
+                        <wm-grid-column binding="productDesc" caption="Product Desc" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="price" caption="Price" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="rating" caption="Rating" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="products.productName" caption="Products Product Name" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="products.productId" caption="Products Product Id" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="productId" caption="Product Id" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                    </wm-grid>
+                </wm-tabpane>
+                <wm-tabpane name="tabpane3" title="Update Employee">
+                    <wm-form errormessage="" captionposition="top" title="Update Employee Form" enctype="application/x-www-form-urlencoded" method="put" dataset="UpdateEmployeeInvoke" captionalign="left" name="form_UpdateEmp">
+                        <wm-layoutgrid columns="2" name="layoutgrid1">
+                            <wm-gridrow name="gridrow1">
+                                <wm-composite name="composite3">
+                                    <wm-label class="h4 control-label" caption="bind:Widgets.form_UpdateEmp.dataoutput" name="label3"></wm-label>
+                                </wm-composite>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow2">
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn1">
+                                    <wm-form-field name="RequestBody_address" displayname="Address" key="RequestBody.address" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value"></wm-form-field>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn2">
+                                    <wm-form-field name="RequestBody_deptId" displayname="Dept Id" key="RequestBody.deptId" type="integer" show="true" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow3">
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn3">
+                                    <wm-form-field name="RequestBody_empId" displayname="Emp Id" key="RequestBody.empId" type="integer" show="true" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn4">
+                                    <wm-form-field name="RequestBody_firstName" displayname="First Name" key="RequestBody.firstName" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value"></wm-form-field>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow4">
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn5">
+                                    <wm-form-field name="RequestBody_lastName" displayname="Last Name" key="RequestBody.lastName" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value"></wm-form-field>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn6">
+                                    <wm-form-field name="RequestBody_profilePic" displayname="Profile Pic" key="RequestBody.profilePic" type="string" show="true" widget="upload" inputtype="text" placeholder="Enter value"></wm-form-field>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                        <wm-buttongroup horizontalalign="right" class="form-action col-md-12" name="buttongroup1">
+                            <wm-button caption="Reset" type="reset" class="btn-secondary" name="button1"></wm-button>
+                            <wm-button caption="Cancel" type="button" class="btn-warning" name="button2"></wm-button>
+                            <wm-button caption="Save" type="submit" class="btn-primary" name="button3"></wm-button>
+                        </wm-buttongroup>
+                    </wm-form>
+                </wm-tabpane>
+                <wm-tabpane name="tabpane4" title="Delete Emp"></wm-tabpane>
+            </wm-tabs>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>

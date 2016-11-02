@@ -1,0 +1,18 @@
+{
+  "endpointAddress" : "https://www.wavemakeronline.com/run-8r4sy6c58m/TESTINGAPI_S/services/API_TESTING_DB/Employee/1",
+  "method" : "PUT",
+  "contentType" : "application/json",
+  "requestBody" : "{\n\t\"empId\": 1,\n\t\"firstName\": \"Blossomm\",\n\t\"lastName\": \"Blyss\",\n\t\"address\": \"45 Houston Street\",\n\t\"profilePic\": null,\n\t\"deptId\": 1,\n\t\"departments\": null\n}",
+  "authType" : "NONE",
+  "headers" : { },
+  "queryParams" : { },
+  "sampleRestResponse" : {
+    "responseBody" : "{\"empId\":1,\"firstName\":\"Blossomm\",\"lastName\":\"Blyss\",\"address\":\"45 Houston Street\",\"profilePic\":null,\"deptId\":1,\"departments\":null}",
+    "convertedResponse" : null,
+    "statusCode" : 0,
+    "responseHeaders" : null,
+    "contentType" : null,
+    "cookies" : null
+  },
+  "redirectEnabled" : true
+}

@@ -1,0 +1,542 @@
+{
+  "description" : "API_TESTING_DB",
+  "draft" : false,
+  "name" : "API_TESTING_DB",
+  "packageName" : "com.testingapi_s.api_testing_db",
+  "tables" : [ {
+    "catalog" : "API_TESTING_DB",
+    "columns" : [ {
+      "columnValue" : {
+        "type" : "user-defined",
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : ""
+      },
+      "fieldName" : "productId",
+      "foreignKey" : true,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "javaType" : "integer",
+      "length" : 255,
+      "name" : "PRODUCT_ID",
+      "nullable" : false,
+      "oldName" : "PRODUCT_ID",
+      "partOfAnyRelation" : true,
+      "partOfForeignKey" : true,
+      "partOfPrimaryKey" : true,
+      "partOfUniqueKey" : true,
+      "precision" : 10,
+      "primaryKey" : true,
+      "scale" : 0,
+      "sqlType" : "number",
+      "unique" : true
+    }, {
+      "columnValue" : {
+        "type" : "user-defined",
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : ""
+      },
+      "fieldName" : "productDesc",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "javaType" : "string",
+      "length" : 255,
+      "name" : "PRODUCT_DESC",
+      "nullable" : true,
+      "oldName" : "PRODUCT_DESC",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "precision" : 19,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sqlType" : "string",
+      "unique" : false
+    }, {
+      "columnValue" : {
+        "type" : "user-defined",
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : ""
+      },
+      "fieldName" : "price",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "javaType" : "float",
+      "length" : 255,
+      "name" : "PRICE",
+      "nullable" : true,
+      "oldName" : "PRICE",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "precision" : 12,
+      "primaryKey" : false,
+      "scale" : 4,
+      "sqlType" : "number",
+      "unique" : false
+    }, {
+      "columnValue" : {
+        "type" : "user-defined",
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : ""
+      },
+      "fieldName" : "rating",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "javaType" : "float",
+      "length" : 255,
+      "name" : "RATING",
+      "nullable" : true,
+      "oldName" : "RATING",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "precision" : 12,
+      "primaryKey" : false,
+      "scale" : 4,
+      "sqlType" : "number",
+      "unique" : false
+    } ],
+    "constraints" : [ ],
+    "entityName" : "ProductDetails",
+    "fullyQualifiedName" : "com.testingapi_s.api_testing_db.ProductDetails",
+    "name" : "PRODUCT_DETAILS",
+    "oldName" : "PRODUCT_DETAILS",
+    "primaryKey" : {
+      "columns" : [ "PRODUCT_ID" ],
+      "composite" : false,
+      "generator" : {
+        "generatorType" : "assigned",
+        "generatorValue" : null
+      },
+      "name" : "PRIMARY",
+      "virtual" : false
+    },
+    "relations" : [ {
+      "cardinality" : "OneToOne",
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fieldName" : "products",
+      "mappings" : [ {
+        "sourceColumn" : "PRODUCT_ID",
+        "targetColumn" : "PRODUCT_ID"
+      } ],
+      "name" : "FK_PRODUCT_DETAILS_TO_PRrV5tt",
+      "primary" : true,
+      "selfRelation" : false,
+      "sourceTable" : "PRODUCT_DETAILS",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "PRODUCTS",
+      "virtual" : false
+    } ],
+    "schema" : null,
+    "type" : "TABLE"
+  }, {
+    "catalog" : "API_TESTING_DB",
+    "columns" : [ {
+      "columnValue" : {
+        "type" : "user-defined",
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : ""
+      },
+      "fieldName" : "deptId",
+      "foreignKey" : false,
+      "generatorType" : "identity",
+      "generatorValue" : null,
+      "javaType" : "integer",
+      "length" : 255,
+      "name" : "DEPT_ID",
+      "nullable" : false,
+      "oldName" : "DEPT_ID",
+      "partOfAnyRelation" : true,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : true,
+      "partOfUniqueKey" : true,
+      "precision" : 10,
+      "primaryKey" : true,
+      "scale" : 0,
+      "sqlType" : "number",
+      "unique" : true
+    }, {
+      "columnValue" : {
+        "type" : "user-defined",
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : ""
+      },
+      "fieldName" : "deptName",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "javaType" : "string",
+      "length" : 255,
+      "name" : "DEPT_NAME",
+      "nullable" : true,
+      "oldName" : "DEPT_NAME",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "precision" : 19,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sqlType" : "string",
+      "unique" : false
+    }, {
+      "columnValue" : {
+        "type" : "user-defined",
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : ""
+      },
+      "fieldName" : "deptCode",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "javaType" : "string",
+      "length" : 255,
+      "name" : "DEPT_CODE",
+      "nullable" : true,
+      "oldName" : "DEPT_CODE",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : true,
+      "precision" : 19,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sqlType" : "string",
+      "unique" : true
+    } ],
+    "constraints" : [ {
+      "columns" : [ "DEPT_CODE" ],
+      "composite" : false,
+      "name" : "UK_DEPARTMENTS_DEPT_CODE",
+      "type" : "UNIQUE",
+      "virtual" : false
+    } ],
+    "entityName" : "Departments",
+    "fullyQualifiedName" : "com.testingapi_s.api_testing_db.Departments",
+    "name" : "DEPARTMENTS",
+    "oldName" : "DEPARTMENTS",
+    "primaryKey" : {
+      "columns" : [ "DEPT_ID" ],
+      "composite" : false,
+      "generator" : {
+        "generatorType" : "identity",
+        "generatorValue" : null
+      },
+      "name" : "PRIMARY",
+      "virtual" : false
+    },
+    "relations" : [ {
+      "cardinality" : "OneToOne",
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fieldName" : "employee",
+      "mappings" : [ {
+        "sourceColumn" : "DEPT_ID",
+        "targetColumn" : "DEPT_ID"
+      } ],
+      "name" : "FK_EMPLOYEE_TO_DEPARTMENmsnGM",
+      "primary" : false,
+      "selfRelation" : false,
+      "sourceTable" : "DEPARTMENTS",
+      "targetColumnsUniqueKey" : true,
+      "targetTable" : "EMPLOYEE",
+      "virtual" : false
+    } ],
+    "schema" : null,
+    "type" : "TABLE"
+  }, {
+    "catalog" : "API_TESTING_DB",
+    "columns" : [ {
+      "columnValue" : {
+        "type" : "user-defined",
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : ""
+      },
+      "fieldName" : "productId",
+      "foreignKey" : false,
+      "generatorType" : "identity",
+      "generatorValue" : null,
+      "javaType" : "integer",
+      "length" : 255,
+      "name" : "PRODUCT_ID",
+      "nullable" : false,
+      "oldName" : "PRODUCT_ID",
+      "partOfAnyRelation" : true,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : true,
+      "partOfUniqueKey" : true,
+      "precision" : 10,
+      "primaryKey" : true,
+      "scale" : 0,
+      "sqlType" : "number",
+      "unique" : true
+    }, {
+      "columnValue" : {
+        "type" : "user-defined",
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : ""
+      },
+      "fieldName" : "productName",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "javaType" : "string",
+      "length" : 255,
+      "name" : "PRODUCT_NAME",
+      "nullable" : true,
+      "oldName" : "PRODUCT_NAME",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "precision" : 19,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sqlType" : "string",
+      "unique" : false
+    } ],
+    "constraints" : [ ],
+    "entityName" : "Products",
+    "fullyQualifiedName" : "com.testingapi_s.api_testing_db.Products",
+    "name" : "PRODUCTS",
+    "oldName" : "PRODUCTS",
+    "primaryKey" : {
+      "columns" : [ "PRODUCT_ID" ],
+      "composite" : false,
+      "generator" : {
+        "generatorType" : "identity",
+        "generatorValue" : null
+      },
+      "name" : "PRIMARY",
+      "virtual" : false
+    },
+    "relations" : [ {
+      "cardinality" : "OneToOne",
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fieldName" : "productDetails",
+      "mappings" : [ {
+        "sourceColumn" : "PRODUCT_ID",
+        "targetColumn" : "PRODUCT_ID"
+      } ],
+      "name" : "FK_PRODUCT_DETAILS_TO_PRrV5tt",
+      "primary" : false,
+      "selfRelation" : false,
+      "sourceTable" : "PRODUCTS",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "PRODUCT_DETAILS",
+      "virtual" : false
+    } ],
+    "schema" : null,
+    "type" : "TABLE"
+  }, {
+    "catalog" : "API_TESTING_DB",
+    "columns" : [ {
+      "columnValue" : {
+        "type" : "user-defined",
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : ""
+      },
+      "fieldName" : "empId",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "javaType" : "integer",
+      "length" : 255,
+      "name" : "EMP_ID",
+      "nullable" : false,
+      "oldName" : "EMP_ID",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : true,
+      "partOfUniqueKey" : true,
+      "precision" : 10,
+      "primaryKey" : true,
+      "scale" : 0,
+      "sqlType" : "number",
+      "unique" : true
+    }, {
+      "columnValue" : {
+        "type" : "user-defined",
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : ""
+      },
+      "fieldName" : "firstName",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "javaType" : "string",
+      "length" : 255,
+      "name" : "FIRST_NAME",
+      "nullable" : true,
+      "oldName" : "FIRST_NAME",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "precision" : 19,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sqlType" : "string",
+      "unique" : false
+    }, {
+      "columnValue" : {
+        "type" : "user-defined",
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : ""
+      },
+      "fieldName" : "lastName",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "javaType" : "string",
+      "length" : 255,
+      "name" : "LAST_NAME",
+      "nullable" : true,
+      "oldName" : "LAST_NAME",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "precision" : 19,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sqlType" : "string",
+      "unique" : false
+    }, {
+      "columnValue" : {
+        "type" : "user-defined",
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : ""
+      },
+      "fieldName" : "address",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "javaType" : "string",
+      "length" : 255,
+      "name" : "ADDRESS",
+      "nullable" : true,
+      "oldName" : "ADDRESS",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "precision" : 19,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sqlType" : "string",
+      "unique" : false
+    }, {
+      "columnValue" : {
+        "type" : "user-defined",
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : null
+      },
+      "fieldName" : "profilePic",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "javaType" : "blob",
+      "length" : 255,
+      "name" : "PROFILE_PIC",
+      "nullable" : true,
+      "oldName" : "PROFILE_PIC",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "precision" : 19,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sqlType" : "blob",
+      "unique" : false
+    }, {
+      "columnValue" : {
+        "type" : "user-defined",
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : ""
+      },
+      "fieldName" : "deptId",
+      "foreignKey" : true,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "javaType" : "integer",
+      "length" : 255,
+      "name" : "DEPT_ID",
+      "nullable" : true,
+      "oldName" : "DEPT_ID",
+      "partOfAnyRelation" : true,
+      "partOfForeignKey" : true,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : true,
+      "precision" : 10,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sqlType" : "number",
+      "unique" : true
+    } ],
+    "constraints" : [ {
+      "columns" : [ "DEPT_ID" ],
+      "composite" : false,
+      "name" : "UK_EMPLOYEE_DEPT_ID",
+      "type" : "UNIQUE",
+      "virtual" : false
+    } ],
+    "entityName" : "Employee",
+    "fullyQualifiedName" : "com.testingapi_s.api_testing_db.Employee",
+    "name" : "EMPLOYEE",
+    "oldName" : "EMPLOYEE",
+    "primaryKey" : {
+      "columns" : [ "EMP_ID" ],
+      "composite" : false,
+      "generator" : {
+        "generatorType" : "assigned",
+        "generatorValue" : null
+      },
+      "name" : "PRIMARY",
+      "virtual" : false
+    },
+    "relations" : [ {
+      "cardinality" : "OneToOne",
+      "columnsUniqueKey" : true,
+      "composite" : false,
+      "fieldName" : "departments",
+      "mappings" : [ {
+        "sourceColumn" : "DEPT_ID",
+        "targetColumn" : "DEPT_ID"
+      } ],
+      "name" : "FK_EMPLOYEE_TO_DEPARTMENmsnGM",
+      "primary" : true,
+      "selfRelation" : false,
+      "sourceTable" : "EMPLOYEE",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "DEPARTMENTS",
+      "virtual" : false
+    } ],
+    "schema" : null,
+    "type" : "TABLE"
+  } ]
+}

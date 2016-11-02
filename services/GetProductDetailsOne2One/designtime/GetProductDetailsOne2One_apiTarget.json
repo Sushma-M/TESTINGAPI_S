@@ -1,0 +1,86 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "2.0",
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "6dd69bf7-4efc-400d-a92b-1e5b0dc3397d",
+    "x-WM-USE_PROXY_FOR_WEB" : false,
+    "x-WM-SERVICE_ID" : "wavemakeronline",
+    "x-WM-USE_PROXY_FOR_MOBILE" : false
+  },
+  "host" : "www.wavemakeronline.com",
+  "basePath" : "/run-8r4sy6c58m",
+  "tags" : [ {
+    "name" : "RestServiceVirtualController",
+    "description" : "Rest service swagger documentation"
+  } ],
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/TESTINGAPI_S/services/API_TESTING_DB/ProductDetails/{productId}" : {
+      "get" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "operationId" : "GetProductDetailsOne2One_RestServiceVirtualController-invoke",
+        "consumes" : [ "text/xml" ],
+        "parameters" : [ {
+          "name" : "productId",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            }
+          }
+        },
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "x-WM-BASE_PATH" : "/TESTINGAPI_S/services/API_TESTING_DB/ProductDetails/{productId}",
+      "x-WM-COMPLETE_PATH" : "${rest.GetProductDetailsOne2One.scheme}://${rest.GetProductDetailsOne2One.host}${rest.GetProductDetailsOne2One.basepath}/TESTINGAPI_S/services/API_TESTING_DB/ProductDetails/{productId}",
+      "x-WM-RELATIVE_PATH" : ""
+    }
+  },
+  "definitions" : {
+    "RootResponse" : {
+      "properties" : {
+        "productDesc" : {
+          "type" : "string"
+        },
+        "price" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "rating" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "products" : {
+          "$ref" : "#/definitions/products"
+        },
+        "productId" : {
+          "type" : "integer",
+          "format" : "int32"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetProductDetailsOne2One.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "products" : {
+      "properties" : {
+        "productName" : {
+          "type" : "string"
+        },
+        "productId" : {
+          "type" : "integer",
+          "format" : "int32"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetProductDetailsOne2One.products",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "endpointAddress" : "https://www.wavemakeronline.com/run-8r4sy6c58m/TESTINGAPI_S/services/API_TESTING_DB/Products",
+  "method" : "GET",
+  "contentType" : "text/xml",
+  "requestBody" : "",
+  "authType" : "NONE",
+  "headers" : { },
+  "queryParams" : { },
+  "sampleRestResponse" : {
+    "responseBody" : "{\"totalElements\":3,\"totalPages\":1,\"first\":true,\"sort\":null,\"numberOfElements\":3,\"last\":true,\"size\":20,\"number\":0,\"content\":[{\"productId\":1,\"productName\":\"Samsung Galaxy On Nxt\"},{\"productId\":2,\"productName\":\"Samsung Galaxy On5\"},{\"productId\":3,\"productName\":\"Samsung Galaxy On7\"}]}",
+    "convertedResponse" : null,
+    "statusCode" : 0,
+    "responseHeaders" : null,
+    "contentType" : null,
+    "cookies" : null
+  },
+  "redirectEnabled" : true
+}

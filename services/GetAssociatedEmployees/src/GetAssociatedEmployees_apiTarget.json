@@ -1,0 +1,271 @@
+{
+  "tags" : [ {
+    "description" : "Rest service swagger documentation",
+    "name" : "RestServiceVirtualController"
+  } ],
+  "basePath" : "${rest.GetAssociatedEmployees.basepath}",
+  "paths" : {
+    "/TESTINGAPI_S/services/hrdb/Department/{id}/employees" : {
+      "x-WM-BASE_PATH" : "/TESTINGAPI_S/services/hrdb/Department/{id}/employees",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "get" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "parameters" : [ {
+          "name" : "id",
+          "type" : "string",
+          "required" : true,
+          "in" : "path"
+        } ],
+        "consumes" : [ "text/xml" ],
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            },
+            "description" : "Success"
+          }
+        },
+        "operationId" : "GetAssociatedEmployees_RestServiceVirtualController-invoke"
+      },
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.GetAssociatedEmployees.scheme}://${rest.GetAssociatedEmployees.host}${rest.GetAssociatedEmployees.basepath}/TESTINGAPI_S/services/hrdb/Department/{id}/employees"
+    }
+  },
+  "host" : "${rest.GetAssociatedEmployees.host}",
+  "schemes" : [ "${rest.GetAssociatedEmployees.scheme}" ],
+  "swagger" : "2.0",
+  "definitions" : {
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetAssociatedEmployees.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "content" : {
+          "x-WM-IS_LIST" : true,
+          "items" : {
+            "$ref" : "#/definitions/contentEntryItem"
+          },
+          "uniqueItems" : false,
+          "type" : "array"
+        },
+        "numberOfElements" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "sort" : {
+          "type" : "string"
+        },
+        "last" : {
+          "type" : "boolean"
+        },
+        "totalElements" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "number" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "first" : {
+          "type" : "boolean"
+        },
+        "totalPages" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "size" : {
+          "format" : "int32",
+          "type" : "integer"
+        }
+      }
+    },
+    "department" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetAssociatedEmployees.department",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "tenantId" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "budget" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "q2" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "location" : {
+          "type" : "string"
+        },
+        "q1" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "q4" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "q3" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "deptCode" : {
+          "type" : "string"
+        },
+        "deptId" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "employees" : {
+          "type" : "string"
+        }
+      }
+    },
+    "employeeByManagerId" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetAssociatedEmployees.employeeByManagerId",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "tenantId" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "zip" : {
+          "type" : "string"
+        },
+        "department" : {
+          "$ref" : "#/definitions/department"
+        },
+        "street" : {
+          "type" : "string"
+        },
+        "empId" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "state" : {
+          "type" : "string"
+        },
+        "lastname" : {
+          "type" : "string"
+        },
+        "picurl" : {
+          "type" : "string"
+        },
+        "vacations" : {
+          "type" : "string"
+        },
+        "firstname" : {
+          "type" : "string"
+        },
+        "password" : {
+          "type" : "string"
+        },
+        "city" : {
+          "type" : "string"
+        },
+        "username" : {
+          "type" : "string"
+        },
+        "managerId" : {
+          "type" : "string"
+        },
+        "birthdate" : {
+          "type" : "string"
+        },
+        "role" : {
+          "type" : "string"
+        },
+        "deptId" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "jobTitle" : {
+          "type" : "string"
+        }
+      }
+    },
+    "contentEntryItem" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetAssociatedEmployees.contentEntryItem",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "tenantId" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "zip" : {
+          "type" : "string"
+        },
+        "department" : {
+          "$ref" : "#/definitions/department"
+        },
+        "employeeByManagerId" : {
+          "type" : "string"
+        },
+        "street" : {
+          "type" : "string"
+        },
+        "empId" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "state" : {
+          "type" : "string"
+        },
+        "lastname" : {
+          "type" : "string"
+        },
+        "picurl" : {
+          "type" : "string"
+        },
+        "vacations" : {
+          "type" : "string"
+        },
+        "firstname" : {
+          "type" : "string"
+        },
+        "password" : {
+          "type" : "string"
+        },
+        "city" : {
+          "type" : "string"
+        },
+        "username" : {
+          "type" : "string"
+        },
+        "managerId" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "birthdate" : {
+          "type" : "string"
+        },
+        "employeesForManagerId" : {
+          "type" : "string"
+        },
+        "role" : {
+          "type" : "string"
+        },
+        "deptId" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "jobTitle" : {
+          "type" : "string"
+        }
+      }
+    }
+  },
+  "info" : {
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "3436e750-9bce-4b12-90a9-c10b149c8879",
+    "x-WM-USE_PROXY_FOR_WEB" : false,
+    "x-WM-SERVICE_ID" : "wavemakeronline",
+    "x-WM-USE_PROXY_FOR_MOBILE" : false,
+    "version" : "2.0"
+  }
+}

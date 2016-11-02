@@ -1,0 +1,18 @@
+{
+  "endpointAddress" : "https://www.wavemakeronline.com/run-8r4sy6c58m/TESTINGAPI_S/services/API_TESTING_DB/Departments",
+  "method" : "GET",
+  "contentType" : "text/xml",
+  "requestBody" : "",
+  "authType" : "NONE",
+  "headers" : { },
+  "queryParams" : { },
+  "sampleRestResponse" : {
+    "responseBody" : "{\"totalElements\":5,\"totalPages\":1,\"first\":true,\"sort\":null,\"numberOfElements\":5,\"last\":true,\"size\":20,\"number\":0,\"content\":[{\"deptId\":1,\"deptName\":\"Engineering\",\"deptCode\":\"Eng\"},{\"deptId\":2,\"deptName\":\"Support\",\"deptCode\":\"Supp\"},{\"deptId\":3,\"deptName\":\"App Development\",\"deptCode\":\"AppDev\"},{\"deptId\":4,\"deptName\":\"Cloud Dept\",\"deptCode\":\"CloudDept\"},{\"deptId\":5,\"deptName\":\"Sales\",\"deptCode\":\"Sales\"}]}",
+    "convertedResponse" : null,
+    "statusCode" : 0,
+    "responseHeaders" : null,
+    "contentType" : null,
+    "cookies" : null
+  },
+  "redirectEnabled" : true
+}

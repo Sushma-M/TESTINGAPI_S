@@ -1,0 +1,67 @@
+<wm-page data-ng-controller="ProductsPageController" pagetitle="Products" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-livegrid formlayout="dialog" name="livegrid3">
+                <wm-grid gridfirstrowselect="true" editmode="dialog" title="Products List" dataset="bind:Variables.API_TESTING_DBProductsData.dataSet" navigation="Basic" name="grid3">
+                    <wm-grid-column binding="productId" caption="Product Id" generator="identity" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true" readonly="true"></wm-grid-column>
+                    <wm-grid-column binding="productName" caption="Product Name" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
+                    <wm-grid-action key="addNewRow" display-name="New" iconclass="wi wi-plus" show="true" class="btn-primary" action="addNewRow()" position="footer" shortcutkey=""></wm-grid-action>
+                    <wm-grid-row-action key="updaterow" display-name="" title="Edit" iconclass="wi wi-pencil" show="true" class="btn-transparent" action="editRow()"></wm-grid-row-action>
+                    <wm-grid-row-action key="deleterow" display-name="" title="Delete" iconclass="wi wi-trash" show="true" class="btn-transparent" action="deleteRow()"></wm-grid-row-action>
+                </wm-grid>
+                <wm-liveform novalidate="false" errormessage="" title="Products Info" formlayout="dialog" iconclass="wi wi-edit" dataset="bind:Variables.API_TESTING_DBProductsData.dataSet" captionalign="left" captionposition="top" name="liveform3">
+                    <wm-layoutgrid columns="1" name="layoutgrid3">
+                        <wm-gridrow name="gridrow4">
+                            <wm-gridcolumn columnwidth="12" name="gridcolumn9">
+                                <wm-form-field name="productName" displayname="Product Name" required="false" show="true" generator="assigned" primary-key="false" key="productName" type="string" is-related="false" maxchars="255" pc-display="true" mobile-display="true"
+                                widget="text"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                    </wm-layoutgrid>
+                    <wm-form-field name="productId" displayname="Product Id" required="true" show="false" generator="identity" primary-key="true" key="productId" type="integer" is-related="false" step="0" pc-display="true" mobile-display="true" widget="number"></wm-form-field>
+                    <wm-form-action key="cancel" class="form-cancel btn-secondary" iconclass="wi wi-cancel" action="cancel()" display-name="Cancel" show="true" type="button" update-mode="true"></wm-form-action>
+                    <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" show="true" type="submit" update-mode="true"></wm-form-action>
+                </wm-liveform>
+            </wm-livegrid>
+            <wm-livegrid formlayout="dialog" name="livegrid4">
+                <wm-grid gridfirstrowselect="true" editmode="dialog" title="Product_details List" dataset="bind:Variables.API_TESTING_DBProductDetailsData.dataSet" navigation="Basic" name="grid4">
+                    <wm-grid-column binding="productDesc" caption="Product Desc" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-grid-column>
+                    <wm-grid-column binding="price" caption="Price" generator="assigned" pcdisplay="true" mobiledisplay="true" type="float"></wm-grid-column>
+                    <wm-grid-column binding="rating" caption="Rating" generator="assigned" pcdisplay="true" mobiledisplay="true" type="short"></wm-grid-column>
+                    <wm-grid-column binding="products.productId" caption="Product Id" generator="identity" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true" related-entity-name="Products" readonly="true"></wm-grid-column>
+                    <wm-grid-column binding="products.productName" caption="Product Name" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string" related-entity-name="Products"></wm-grid-column>
+                    <wm-grid-action key="addNewRow" display-name="New" iconclass="wi wi-plus" show="true" class="btn-primary" action="addNewRow()" position="footer" shortcutkey=""></wm-grid-action>
+                    <wm-grid-row-action key="updaterow" display-name="" title="Edit" iconclass="wi wi-pencil" show="true" class="btn-transparent" action="editRow()"></wm-grid-row-action>
+                    <wm-grid-row-action key="deleterow" display-name="" title="Delete" iconclass="wi wi-trash" show="true" class="btn-transparent" action="deleteRow()"></wm-grid-row-action>
+                </wm-grid>
+                <wm-liveform novalidate="false" errormessage="" title="Product_details Info" formlayout="dialog" iconclass="wi wi-edit" dataset="bind:Variables.API_TESTING_DBProductDetailsData.dataSet" captionalign="left" captionposition="top" name="liveform4">
+                    <wm-layoutgrid columns="3" name="layoutgrid4">
+                        <wm-gridrow name="gridrow5">
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn10">
+                                <wm-form-field name="productDesc" displayname="Product Desc" required="false" show="true" generator="assigned" primary-key="false" key="productDesc" type="string" is-related="false" maxchars="255" pc-display="true" mobile-display="true"
+                                widget="text"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn11">
+                                <wm-form-field name="price" displayname="Price" required="false" show="true" generator="assigned" primary-key="false" key="price" type="float" is-related="false" step="0.0001" pc-display="true" mobile-display="true" widget="number"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn12">
+                                <wm-form-field name="rating" displayname="Rating" required="false" show="true" generator="assigned" primary-key="false" key="rating" type="short" is-related="false" step="0" pc-display="true" mobile-display="true" widget="number"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow6">
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn13">
+                                <wm-form-field name="products" displayname="Products" required="true" show="true" generator="assigned" primary-key="true" key="products" type="list" is-related="true" pc-display="true" mobile-display="true" widget="select"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn14"></wm-gridcolumn>
+                        </wm-gridrow>
+                    </wm-layoutgrid>
+                    <wm-form-action key="cancel" class="form-cancel btn-secondary" iconclass="wi wi-cancel" action="cancel()" display-name="Cancel" show="true" type="button" update-mode="true"></wm-form-action>
+                    <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" show="true" type="submit" update-mode="true"></wm-form-action>
+                </wm-liveform>
+            </wm-livegrid>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>

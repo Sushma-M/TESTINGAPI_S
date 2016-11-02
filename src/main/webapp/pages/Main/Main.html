@@ -2,10 +2,139 @@
     <wm-header content="header" name="header" height="auto"></wm-header>
     <wm-top-nav name="topnav" content="topnav"></wm-top-nav>
     <wm-content name="content">
-        <wm-left-panel columnwidth="2" name="leftpanel" content="leftnav"></wm-left-panel>
-        <wm-page-content columnwidth="8" paddingleft="15" paddingright="15" name="mainContent">
+        <wm-page-content columnwidth="12" name="mainContent" padding="unset 15px">
+            <wm-tabs name="tabs1">
+                <wm-tabpane name="tabpane1" title="Fetching Dept Data">
+                    <wm-grid title="bind:'Count of Departments:'+Variables.GetCountOfDepts.dataSet.value" dataset="bind:Variables.GetDeptDataInvoke.dataSet.content" navigation="Basic" name="grid_AllData" on-select="Variables.Navigate_Tabpane2.invoke()" filtermode="multicolumn">
+                        <wm-grid-column binding="deptId" caption="Dept Id" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="name" caption="Name" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="deptCode" caption="Dept Code" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="budget" caption="Budget" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="q1" caption="Q1" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="q2" caption="Q2" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="q3" caption="Q3" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="q4" caption="Q4" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="location" caption="Location" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="tenantId" caption="Tenant Id" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="employees" caption="Employees" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                    </wm-grid>
+                </wm-tabpane>
+                <wm-tabpane name="tabpane2" title="Get Dept Data Based on DeptCode">
+                    <wm-grid title="" dataset="bind:Variables.GetDeptDataByDeptCodeInvoke.dataSet" navigation="Classic" name="grid_DeptCode" on-select="Variables.Navigate_Tabpane3.invoke()">
+                        <wm-grid-column binding="tenantId" caption="Tenant Id" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="budget" caption="Budget" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="q2" caption="Q2" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="q1" caption="Q1" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="location" caption="Location" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="q4" caption="Q4" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="q3" caption="Q3" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="name" caption="Name" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="deptCode" caption="Dept Code" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="deptId" caption="Dept Id" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                    </wm-grid>
+                </wm-tabpane>
+                <wm-tabpane name="tabpane3" title="Get Associated Employees">
+                    <wm-grid title="" dataset="bind:Variables.GetAssociatedEmployeesInvoke.dataSet.content" navigation="Pager" name="grid_AssEmployees">
+                        <wm-grid-column binding="empId" caption="Emp Id" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="firstname" caption="Firstname" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="department.deptCode" caption="Department Dept Code" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="tenantId" caption="Tenant Id" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="zip" caption="Zip" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="department.tenantId" caption="Department Tenant Id" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="department.budget" caption="Department Budget" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="department.q2" caption="Department Q2" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="department.q1" caption="Department Q1" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="department.location" caption="Department Location" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="department.q4" caption="Department Q4" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="department.q3" caption="Department Q3" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="department.name" caption="Department Name" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="department.deptId" caption="Department Dept Id" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="department.employees" caption="Department Employees" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="street" caption="Street" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="employeeByManagerId" caption="Employee By Manager Id" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="state" caption="State" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="picurl" caption="Picurl" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="lastname" caption="Lastname" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="vacations" caption="Vacations" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="password" caption="Password" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="city" caption="City" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="username" caption="Username" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="managerId" caption="Manager Id" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="birthdate" caption="Birthdate" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="role" caption="Role" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="employeesForManagerId" caption="Employees For Manager Id" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="deptId" caption="Dept Id" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                        <wm-grid-column binding="jobTitle" caption="Job Title" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                    </wm-grid>
+                </wm-tabpane>
+                <wm-tabpane name="tabpane4" title="Create Dept Object">
+                    <wm-form errormessage="" captionposition="top" title="Add New Dept Form" enctype="application/x-www-form-urlencoded" method="post" dataset="CreateDeptObjectInvoke" captionalign="left" name="form1">
+                        <wm-layoutgrid columns="2" name="layoutgrid1">
+                            <wm-gridrow name="gridrow1">
+                                <wm-composite name="composite1">
+                                    <wm-label class="h4 control-label" caption="bind:Widgets.form1.dataoutput" name="label1"></wm-label>
+                                </wm-composite>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow2">
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn1">
+                                    <wm-form-field readonly="false" name="RequestBody_budget" displayname="Budget" key="RequestBody.budget" type="integer" show="true" widget="number"></wm-form-field>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn2">
+                                    <wm-form-field readonly="false" name="RequestBody_deptCode" displayname="Dept Code" key="RequestBody.deptCode" type="string" show="true" widget="text"></wm-form-field>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow3">
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn3">
+                                    <wm-form-field readonly="false" name="RequestBody_deptId" displayname="Dept Id" key="RequestBody.deptId" type="integer" show="true" widget="number"></wm-form-field>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn4">
+                                    <wm-form-field readonly="false" name="RequestBody_location" displayname="Location" key="RequestBody.location" type="string" show="true" widget="text"></wm-form-field>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow4">
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn5">
+                                    <wm-form-field readonly="false" name="RequestBody_name" displayname="Name" key="RequestBody.name" type="string" show="true" widget="text"></wm-form-field>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn6">
+                                    <wm-form-field readonly="false" name="RequestBody_q1" displayname="Q1" key="RequestBody.q1" type="integer" show="true" widget="number"></wm-form-field>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow5">
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn7">
+                                    <wm-form-field readonly="false" name="RequestBody_q2" displayname="Q2" key="RequestBody.q2" type="integer" show="true" widget="number"></wm-form-field>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn8">
+                                    <wm-form-field readonly="false" name="RequestBody_q3" displayname="Q3" key="RequestBody.q3" type="integer" show="true" widget="number"></wm-form-field>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow6">
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn9">
+                                    <wm-form-field readonly="false" name="RequestBody_q4" displayname="Q4" key="RequestBody.q4" type="integer" show="true" widget="number"></wm-form-field>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn10">
+                                    <wm-form-field readonly="false" name="RequestBody_tenantId" displayname="Tenant Id" key="RequestBody.tenantId" type="integer" show="true" widget="number"></wm-form-field>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow7">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn11">
+                                    <wm-grid editmode="inline" navigation="None" key="RequestBody.employees" name="RequestBody.employees" title="Employees">
+                                        <wm-grid-action key="addNewRow" display-name="New" iconclass="wi wi-plus" show="true" class="btn-primary" action="addNewRow()" position="footer" shortcutkey=""></wm-grid-action>
+                                        <wm-grid-row-action key="updaterow" display-name="" title="Edit" iconclass="wi wi-pencil" show="true" class="btn-transparent" action="editRow()"></wm-grid-row-action>
+                                        <wm-grid-row-action key="deleterow" display-name="" title="Delete" iconclass="wi wi-trash" show="true" class="btn-transparent" action="deleteRow()"></wm-grid-row-action>
+                                    </wm-grid>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                        <wm-buttongroup horizontalalign="right" class="form-action col-md-12" name="buttongroup1">
+                            <wm-button caption="Reset" type="reset" class="btn-secondary" name="button1"></wm-button>
+                            <wm-button caption="Cancel" type="button" class="btn-warning" name="button2"></wm-button>
+                            <wm-button caption="Save" type="submit" class="btn-primary" name="button3"></wm-button>
+                        </wm-buttongroup>
+                    </wm-form>
+                </wm-tabpane>
+                <wm-tabpane name="tabpane5" title="Update Dept Data"></wm-tabpane>
+            </wm-tabs>
         </wm-page-content>
-        <wm-right-panel columnwidth="2" name="rightpanel" content="rightnav"></wm-right-panel>
     </wm-content>
     <wm-footer name="footer" content="footer"></wm-footer>
 </wm-page>

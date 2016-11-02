@@ -1,0 +1,95 @@
+{
+  "tags" : [ {
+    "description" : "Rest service swagger documentation",
+    "name" : "RestServiceVirtualController"
+  } ],
+  "basePath" : "${rest.GetDeptDataByDeptCode.basepath}",
+  "paths" : {
+    "/TESTINGAPI_S/services/hrdb/Department/deptCode/{deptCode}" : {
+      "x-WM-BASE_PATH" : "/TESTINGAPI_S/services/hrdb/Department/deptCode/{deptCode}",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "get" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "parameters" : [ {
+          "name" : "deptCode",
+          "type" : "string",
+          "required" : true,
+          "in" : "path"
+        } ],
+        "consumes" : [ "text/xml" ],
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            },
+            "description" : "Success"
+          }
+        },
+        "operationId" : "GetDeptDataByDeptCode_RestServiceVirtualController-invoke"
+      },
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.GetDeptDataByDeptCode.scheme}://${rest.GetDeptDataByDeptCode.host}${rest.GetDeptDataByDeptCode.basepath}/TESTINGAPI_S/services/hrdb/Department/deptCode/{deptCode}"
+    }
+  },
+  "host" : "${rest.GetDeptDataByDeptCode.host}",
+  "schemes" : [ "${rest.GetDeptDataByDeptCode.scheme}" ],
+  "swagger" : "2.0",
+  "definitions" : {
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetDeptDataByDeptCode.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "tenantId" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "budget" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "q2" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "location" : {
+          "type" : "string"
+        },
+        "q1" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "q4" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "q3" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "deptCode" : {
+          "type" : "string"
+        },
+        "deptId" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "employees" : {
+          "type" : "string"
+        }
+      }
+    }
+  },
+  "info" : {
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "958a6a9c-bc37-474a-a5c8-80d30f4f332a",
+    "x-WM-USE_PROXY_FOR_WEB" : false,
+    "x-WM-SERVICE_ID" : "wavemakeronline",
+    "x-WM-USE_PROXY_FOR_MOBILE" : false,
+    "version" : "2.0"
+  }
+}

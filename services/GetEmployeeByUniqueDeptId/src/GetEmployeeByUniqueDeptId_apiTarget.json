@@ -1,0 +1,94 @@
+{
+  "tags" : [ {
+    "description" : "Rest service swagger documentation",
+    "name" : "RestServiceVirtualController"
+  } ],
+  "basePath" : "${rest.GetEmployeeByUniqueDeptId.basepath}",
+  "paths" : {
+    "/TESTINGAPI_S/services/API_TESTING_DB/Employee/deptId/{deptid}" : {
+      "x-WM-BASE_PATH" : "/TESTINGAPI_S/services/API_TESTING_DB/Employee/deptId/{deptid}",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "get" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "parameters" : [ {
+          "name" : "deptid",
+          "type" : "string",
+          "required" : true,
+          "in" : "path"
+        } ],
+        "consumes" : [ "text/xml" ],
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            },
+            "description" : "Success"
+          }
+        },
+        "operationId" : "GetEmployeeByUniqueDeptId_RestServiceVirtualController-invoke"
+      },
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.GetEmployeeByUniqueDeptId.scheme}://${rest.GetEmployeeByUniqueDeptId.host}${rest.GetEmployeeByUniqueDeptId.basepath}/TESTINGAPI_S/services/API_TESTING_DB/Employee/deptId/{deptid}"
+    }
+  },
+  "host" : "${rest.GetEmployeeByUniqueDeptId.host}",
+  "schemes" : [ "${rest.GetEmployeeByUniqueDeptId.scheme}" ],
+  "swagger" : "2.0",
+  "definitions" : {
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetEmployeeByUniqueDeptId.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "lastName" : {
+          "type" : "string"
+        },
+        "address" : {
+          "type" : "string"
+        },
+        "profilePic" : {
+          "type" : "string"
+        },
+        "empId" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "departments" : {
+          "$ref" : "#/definitions/departments"
+        },
+        "firstName" : {
+          "type" : "string"
+        },
+        "deptId" : {
+          "format" : "int32",
+          "type" : "integer"
+        }
+      }
+    },
+    "departments" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetEmployeeByUniqueDeptId.departments",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "deptName" : {
+          "type" : "string"
+        },
+        "deptCode" : {
+          "type" : "string"
+        },
+        "deptId" : {
+          "format" : "int32",
+          "type" : "integer"
+        }
+      }
+    }
+  },
+  "info" : {
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "d3afb596-a19a-4262-ba4e-80022bd54e83",
+    "x-WM-USE_PROXY_FOR_WEB" : false,
+    "x-WM-SERVICE_ID" : "wavemakeronline",
+    "x-WM-USE_PROXY_FOR_MOBILE" : false,
+    "version" : "2.0"
+  }
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="UpdateEmployee" type="RestService" springFile="UpdateEmployee.spring.xml">
+    <operation name="invoke">
+        <parameter name="RequestBody" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="UpdateEmployee.RootResponse" isList="false"/>
+    </operation>
+    <dataobjects>
+        <dataobject javaType="UpdateEmployee.RootRequest" name="RootRequest" supportsQuickData="false">
+            <element name="address" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="departments" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="deptId" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="empId" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="firstName" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="lastName" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="profilePic" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="UpdateEmployee.RootResponse" name="RootResponse" supportsQuickData="false">
+            <element name="address" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="departments" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="deptId" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="empId" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="firstName" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="lastName" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="profilePic" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+    </dataobjects>
+</service>

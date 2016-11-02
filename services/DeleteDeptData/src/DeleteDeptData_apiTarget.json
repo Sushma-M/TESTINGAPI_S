@@ -1,0 +1,53 @@
+{
+  "tags" : [ {
+    "description" : "Rest service swagger documentation",
+    "name" : "RestServiceVirtualController"
+  } ],
+  "basePath" : "${rest.DeleteDeptData.basepath}",
+  "paths" : {
+    "/TESTINGAPI_S/services/hrdb/Department/{id}" : {
+      "x-WM-BASE_PATH" : "/TESTINGAPI_S/services/hrdb/Department/{id}",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "delete" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "parameters" : [ {
+          "name" : "id",
+          "type" : "string",
+          "required" : true,
+          "in" : "path"
+        } ],
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            },
+            "description" : "Success"
+          }
+        },
+        "operationId" : "DeleteDeptData_RestServiceVirtualController-invoke"
+      },
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.DeleteDeptData.scheme}://${rest.DeleteDeptData.host}${rest.DeleteDeptData.basepath}/TESTINGAPI_S/services/hrdb/Department/{id}"
+    }
+  },
+  "host" : "${rest.DeleteDeptData.host}",
+  "schemes" : [ "${rest.DeleteDeptData.scheme}" ],
+  "swagger" : "2.0",
+  "definitions" : {
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "DeleteDeptData.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    }
+  },
+  "info" : {
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "cf44fadb-f616-47b7-81a3-3d2f8ba08335",
+    "x-WM-USE_PROXY_FOR_WEB" : false,
+    "x-WM-SERVICE_ID" : "wavemakeronline",
+    "x-WM-USE_PROXY_FOR_MOBILE" : false,
+    "version" : "2.0"
+  }
+}

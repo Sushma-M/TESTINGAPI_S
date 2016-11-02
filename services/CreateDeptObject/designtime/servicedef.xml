@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="CreateDeptObject" type="RestService" springFile="CreateDeptObject.spring.xml">
+    <operation name="invoke">
+        <parameter name="RequestBody" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="CreateDeptObject.RootResponse" isList="false"/>
+    </operation>
+    <dataobjects>
+        <dataobject javaType="CreateDeptObject.RootRequest" name="RootRequest" supportsQuickData="false">
+            <element name="budget" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="deptCode" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="deptId" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="employees" typeRef="CreateDeptObject.java.lang.Object" isList="true" allowNull="false"/>
+            <element name="location" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="name" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="q1" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="q2" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="q3" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="q4" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="tenantId" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="CreateDeptObject.RootResponse" name="RootResponse" supportsQuickData="false">
+            <element name="budget" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="deptCode" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="deptId" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="employees" typeRef="CreateDeptObject.java.lang.Object" isList="true" allowNull="false"/>
+            <element name="location" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="name" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="q1" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="q2" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="q3" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="q4" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="tenantId" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="CreateDeptObject.java.lang.Object" name="java.lang.Object" supportsQuickData="false"/>
+    </dataobjects>
+</service>

@@ -1,0 +1,47 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "2.0",
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "2bec05af-52c8-4098-ad94-def19d874235",
+    "x-WM-USE_PROXY_FOR_WEB" : false,
+    "x-WM-SERVICE_ID" : "wavemakeronline",
+    "x-WM-USE_PROXY_FOR_MOBILE" : false
+  },
+  "host" : "www.wavemakeronline.com",
+  "basePath" : "",
+  "tags" : [ {
+    "name" : "RestServiceVirtualController",
+    "description" : "Rest service swagger documentation"
+  } ],
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/DeleteEmp/invoke/TESTINGAPI_S/services/API_TESTING_DB/Employe/{id]" : {
+      "delete" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "operationId" : "DeleteEmp_RestServiceVirtualController-invoke",
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            }
+          }
+        },
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-BASE_PATH" : "/DeleteEmp/invoke/TESTINGAPI_S/services/API_TESTING_DB/Employe/{id]",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.DeleteEmp.scheme}://${rest.DeleteEmp.host}${rest.DeleteEmp.basepath}/TESTINGAPI_S/services/API_TESTING_DB/Employe/{id]"
+    }
+  },
+  "definitions" : {
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "DeleteEmp.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    }
+  }
+}

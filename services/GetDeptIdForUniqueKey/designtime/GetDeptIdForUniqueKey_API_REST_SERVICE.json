@@ -1,0 +1,101 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "2.0",
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "510dd3ce-3b1b-4b94-b7d5-89fc69c246cf",
+    "x-WM-USE_PROXY_FOR_WEB" : false,
+    "x-WM-SERVICE_ID" : "wavemakeronline",
+    "x-WM-USE_PROXY_FOR_MOBILE" : false
+  },
+  "host" : "www.wavemakeronline.com",
+  "basePath" : "",
+  "tags" : [ {
+    "name" : "RestServiceVirtualController",
+    "description" : "Rest service swagger documentation"
+  } ],
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/GetDeptIdForUniqueKey/invoke/TESTINGAPI_S/services/API_TESTING_DB/Departments" : {
+      "get" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "operationId" : "GetDeptIdForUniqueKey_RestServiceVirtualController-invoke",
+        "consumes" : [ "text/xml" ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            }
+          }
+        },
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-BASE_PATH" : "/GetDeptIdForUniqueKey/invoke/TESTINGAPI_S/services/API_TESTING_DB/Departments",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.GetDeptIdForUniqueKey.scheme}://${rest.GetDeptIdForUniqueKey.host}${rest.GetDeptIdForUniqueKey.basepath}/TESTINGAPI_S/services/API_TESTING_DB/Departments"
+    }
+  },
+  "definitions" : {
+    "RootResponse" : {
+      "properties" : {
+        "content" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/contentEntryItem"
+          },
+          "x-WM-IS_LIST" : true
+        },
+        "sort" : {
+          "type" : "string"
+        },
+        "numberOfElements" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "last" : {
+          "type" : "boolean"
+        },
+        "totalElements" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "number" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "first" : {
+          "type" : "boolean"
+        },
+        "totalPages" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "size" : {
+          "type" : "integer",
+          "format" : "int32"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetDeptIdForUniqueKey.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "contentEntryItem" : {
+      "properties" : {
+        "deptName" : {
+          "type" : "string"
+        },
+        "deptCode" : {
+          "type" : "string"
+        },
+        "deptId" : {
+          "type" : "integer",
+          "format" : "int32"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetDeptIdForUniqueKey.contentEntryItem",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    }
+  }
+}

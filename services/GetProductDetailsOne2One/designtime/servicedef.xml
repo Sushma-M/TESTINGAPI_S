@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="GetProductDetailsOne2One" type="RestService" springFile="GetProductDetailsOne2One.spring.xml">
+    <operation name="invoke">
+        <parameter name="productId" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="GetProductDetailsOne2One.RootResponse" isList="false"/>
+    </operation>
+    <dataobjects>
+        <dataobject javaType="GetProductDetailsOne2One.RootResponse" name="RootResponse" supportsQuickData="false">
+            <element name="price" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="productDesc" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="productId" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="products" typeRef="GetProductDetailsOne2One.products" isList="false" allowNull="false"/>
+            <element name="rating" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="GetProductDetailsOne2One.products" name="products" supportsQuickData="false">
+            <element name="productId" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="productName" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+    </dataobjects>
+</service>

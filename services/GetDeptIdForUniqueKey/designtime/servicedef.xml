@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="GetDeptIdForUniqueKey" type="RestService" springFile="GetDeptIdForUniqueKey.spring.xml">
+    <operation name="invoke">
+        <return typeRef="GetDeptIdForUniqueKey.RootResponse" isList="false"/>
+    </operation>
+    <dataobjects>
+        <dataobject javaType="GetDeptIdForUniqueKey.RootResponse" name="RootResponse" supportsQuickData="false">
+            <element name="content" typeRef="GetDeptIdForUniqueKey.contentEntryItem" isList="true" allowNull="false"/>
+            <element name="first" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="last" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="number" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="numberOfElements" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="size" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="sort" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="totalElements" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="totalPages" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="GetDeptIdForUniqueKey.contentEntryItem" name="contentEntryItem" supportsQuickData="false">
+            <element name="deptCode" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="deptId" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="deptName" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+    </dataobjects>
+</service>

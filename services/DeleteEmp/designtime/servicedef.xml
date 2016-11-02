@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="DeleteEmp" type="RestService" springFile="DeleteEmp.spring.xml">
+    <operation name="invoke">
+        <return typeRef="DeleteEmp.RootResponse" isList="false"/>
+    </operation>
+    <dataobjects>
+        <dataobject javaType="DeleteEmp.RootResponse" name="RootResponse" supportsQuickData="false"/>
+    </dataobjects>
+</service>

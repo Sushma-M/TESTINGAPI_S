@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="API_TESTING_DB" type="DataService" springFile="API_TESTING_DB.spring.xml">
+    <dataobjects>
+        <dataobject javaType="com.testingapi_s.api_testing_db.Departments">
+            <element name="deptCode" typeRef="java.lang.String" allowNull="true"/>
+            <element name="deptId" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="deptName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="employee" typeRef="com.testingapi_s.api_testing_db.Employee" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testingapi_s.api_testing_db.Employee">
+            <element name="address" typeRef="java.lang.String" allowNull="true"/>
+            <element name="departments" typeRef="com.testingapi_s.api_testing_db.Departments" allowNull="true"/>
+            <element name="deptId" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="empId" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="firstName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="lastName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="profilePic" typeRef="java.lang.Byte" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testingapi_s.api_testing_db.ProductDetails">
+            <element name="price" typeRef="java.lang.Float" allowNull="true"/>
+            <element name="productDesc" typeRef="java.lang.String" allowNull="true"/>
+            <element name="productId" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="products" typeRef="com.testingapi_s.api_testing_db.Products" allowNull="true"/>
+            <element name="rating" typeRef="java.lang.Float" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testingapi_s.api_testing_db.Products">
+            <element name="productDetails" typeRef="com.testingapi_s.api_testing_db.ProductDetails" allowNull="true"/>
+            <element name="productId" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="productName" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.wavemaker.runtime.data.expression.QueryFilter">
+            <element name="attributeName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="attributeType" typeRef="java.lang.String" allowNull="true"/>
+            <element name="attributeValue" allowNull="true"/>
+            <element name="filterCondition" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.wavemaker.runtime.data.model.CustomProcedure">
+            <element name="procedureParams" typeRef="com.wavemaker.runtime.data.model.CustomProcedureParam" isList="true" allowNull="true"/>
+            <element name="procedureStr" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.wavemaker.runtime.data.model.CustomQuery">
+            <element name="nativeSql" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="queryParams" typeRef="com.wavemaker.runtime.data.model.CustomQueryParam" isList="true" allowNull="true"/>
+            <element name="queryStr" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+    </dataobjects>
+</service>

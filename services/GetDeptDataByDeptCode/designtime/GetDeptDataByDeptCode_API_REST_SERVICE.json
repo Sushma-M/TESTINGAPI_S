@@ -1,0 +1,95 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "2.0",
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "958a6a9c-bc37-474a-a5c8-80d30f4f332a",
+    "x-WM-USE_PROXY_FOR_WEB" : false,
+    "x-WM-SERVICE_ID" : "wavemakeronline",
+    "x-WM-USE_PROXY_FOR_MOBILE" : false
+  },
+  "host" : "www.wavemakeronline.com",
+  "basePath" : "",
+  "tags" : [ {
+    "name" : "RestServiceVirtualController",
+    "description" : "Rest service swagger documentation"
+  } ],
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/GetDeptDataByDeptCode/invoke/TESTINGAPI_S/services/hrdb/Department/deptCode/{deptCode}" : {
+      "get" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "operationId" : "GetDeptDataByDeptCode_RestServiceVirtualController-invoke",
+        "consumes" : [ "text/xml" ],
+        "parameters" : [ {
+          "name" : "deptCode",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            }
+          }
+        },
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-BASE_PATH" : "/GetDeptDataByDeptCode/invoke/TESTINGAPI_S/services/hrdb/Department/deptCode/{deptCode}",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.GetDeptDataByDeptCode.scheme}://${rest.GetDeptDataByDeptCode.host}${rest.GetDeptDataByDeptCode.basepath}/TESTINGAPI_S/services/hrdb/Department/deptCode/{deptCode}"
+    }
+  },
+  "definitions" : {
+    "RootResponse" : {
+      "properties" : {
+        "tenantId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "budget" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "q2" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "q1" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "location" : {
+          "type" : "string"
+        },
+        "q4" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "q3" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "deptCode" : {
+          "type" : "string"
+        },
+        "deptId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "employees" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetDeptDataByDeptCode.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    }
+  }
+}

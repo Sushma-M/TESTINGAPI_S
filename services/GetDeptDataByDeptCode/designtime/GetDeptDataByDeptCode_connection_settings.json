@@ -1,0 +1,18 @@
+{
+  "endpointAddress" : "https://www.wavemakeronline.com/run-8r4sy6c58m/TESTINGAPI_S/services/hrdb/Department/deptCode/Eng",
+  "method" : "GET",
+  "contentType" : "text/xml",
+  "requestBody" : "",
+  "authType" : "NONE",
+  "headers" : { },
+  "queryParams" : { },
+  "sampleRestResponse" : {
+    "responseBody" : "{\"deptId\":1,\"name\":\"Engineering\",\"budget\":1936760,\"q1\":445455,\"q2\":522925,\"q3\":426087,\"q4\":542293,\"deptCode\":\"Eng\",\"location\":\"San Francisco\",\"tenantId\":1,\"employees\":null}",
+    "convertedResponse" : null,
+    "statusCode" : 0,
+    "responseHeaders" : null,
+    "contentType" : null,
+    "cookies" : null
+  },
+  "redirectEnabled" : true
+}

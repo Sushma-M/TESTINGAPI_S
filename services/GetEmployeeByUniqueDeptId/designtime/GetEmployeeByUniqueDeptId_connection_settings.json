@@ -1,0 +1,18 @@
+{
+  "endpointAddress" : "https://www.wavemakeronline.com/run-8r4sy6c58m/TESTINGAPI_S/services/API_TESTING_DB/Employee/deptId/1",
+  "method" : "GET",
+  "contentType" : "text/xml",
+  "requestBody" : "",
+  "authType" : "NONE",
+  "headers" : { },
+  "queryParams" : { },
+  "sampleRestResponse" : {
+    "responseBody" : "{\"empId\":1,\"firstName\":\"Blossom\",\"lastName\":\"Blyss\",\"address\":\"45 Houston Street\",\"profilePic\":\"\",\"deptId\":1,\"departments\":{\"deptId\":1,\"deptName\":\"Engineering\",\"deptCode\":\"Eng\"}}",
+    "convertedResponse" : null,
+    "statusCode" : 0,
+    "responseHeaders" : null,
+    "contentType" : null,
+    "cookies" : null
+  },
+  "redirectEnabled" : true
+}

@@ -3,11 +3,23 @@
   "type" : "PARTIAL",
   "params" : [ ]
 }, {
+  "name" : "DatagridWithForm",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Employee",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
   "name" : "Login",
   "type" : "PAGE",
   "params" : [ ]
 }, {
   "name" : "Main",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Products",
   "type" : "PAGE",
   "params" : [ ]
 }, {

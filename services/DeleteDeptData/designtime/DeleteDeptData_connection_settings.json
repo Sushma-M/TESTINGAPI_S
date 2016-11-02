@@ -1,0 +1,20 @@
+{
+  "endpointAddress" : "https://www.wavemakeronline.com/run-8r4sy6c58m/TESTINGAPI_S/services/hrdb/Department/3",
+  "method" : "DELETE",
+  "contentType" : "application/json",
+  "requestBody" : "",
+  "authType" : "NONE",
+  "headers" : {
+    "Content-Type" : "application/json"
+  },
+  "queryParams" : { },
+  "sampleRestResponse" : {
+    "responseBody" : "true",
+    "convertedResponse" : null,
+    "statusCode" : 0,
+    "responseHeaders" : null,
+    "contentType" : null,
+    "cookies" : null
+  },
+  "redirectEnabled" : true
+}

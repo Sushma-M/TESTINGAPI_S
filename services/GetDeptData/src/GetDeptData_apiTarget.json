@@ -1,0 +1,132 @@
+{
+  "tags" : [ {
+    "description" : "Rest service swagger documentation",
+    "name" : "RestServiceVirtualController"
+  } ],
+  "basePath" : "${rest.GetDeptData.basepath}",
+  "paths" : {
+    "/TESTINGAPI_S/services/hrdb/Department" : {
+      "x-WM-BASE_PATH" : "/TESTINGAPI_S/services/hrdb/Department",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "get" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "consumes" : [ "text/xml" ],
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            },
+            "description" : "Success"
+          }
+        },
+        "operationId" : "GetDeptData_RestServiceVirtualController-invoke"
+      },
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.GetDeptData.scheme}://${rest.GetDeptData.host}${rest.GetDeptData.basepath}/TESTINGAPI_S/services/hrdb/Department"
+    }
+  },
+  "host" : "${rest.GetDeptData.host}",
+  "schemes" : [ "${rest.GetDeptData.scheme}" ],
+  "swagger" : "2.0",
+  "definitions" : {
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetDeptData.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "content" : {
+          "x-WM-IS_LIST" : true,
+          "items" : {
+            "$ref" : "#/definitions/contentEntryItem"
+          },
+          "uniqueItems" : false,
+          "type" : "array"
+        },
+        "numberOfElements" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "sort" : {
+          "type" : "string"
+        },
+        "last" : {
+          "type" : "boolean"
+        },
+        "totalElements" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "number" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "first" : {
+          "type" : "boolean"
+        },
+        "totalPages" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "size" : {
+          "format" : "int32",
+          "type" : "integer"
+        }
+      }
+    },
+    "contentEntryItem" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetDeptData.contentEntryItem",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "tenantId" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "budget" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "q2" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "location" : {
+          "type" : "string"
+        },
+        "q1" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "q4" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "q3" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "deptCode" : {
+          "type" : "string"
+        },
+        "deptId" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "employees" : {
+          "type" : "string"
+        }
+      }
+    }
+  },
+  "info" : {
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "720b2a9e-4594-4752-bbaa-ccc77a148a96",
+    "x-WM-USE_PROXY_FOR_WEB" : false,
+    "x-WM-SERVICE_ID" : "wavemakeronline",
+    "x-WM-USE_PROXY_FOR_MOBILE" : false,
+    "version" : "2.0"
+  }
+}

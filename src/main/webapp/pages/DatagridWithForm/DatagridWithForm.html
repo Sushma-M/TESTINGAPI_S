@@ -1,0 +1,98 @@
+<wm-page data-ng-controller="DatagridWithFormPageController" pagetitle="Datagrid With Form" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-grid title="" dataset="bind:Variables.GetDeptDataInvoke.dataSet.content" navigation="Classic" name="grid1">
+                <wm-grid-column binding="tenantId" caption="Tenant Id" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                <wm-grid-column binding="budget" caption="Budget" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                <wm-grid-column binding="q2" caption="Q2" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                <wm-grid-column binding="q1" caption="Q1" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                <wm-grid-column binding="location" caption="Location" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                <wm-grid-column binding="q4" caption="Q4" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                <wm-grid-column binding="q3" caption="Q3" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                <wm-grid-column binding="name" caption="Name" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                <wm-grid-column binding="deptCode" caption="Dept Code" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                <wm-grid-column binding="deptId" caption="Dept Id" type="string" readonly="true" edit-widget-type="text" show="true"></wm-grid-column>
+                <wm-grid-column binding="rowOperations" caption="Actions" type="custom" readonly="true" edit-widget-type="text" sortable="false" searchable="false" show="true"></wm-grid-column>
+                <wm-grid-action key="customButton" display-name="New" show="true" class="btn-primary" iconclass="" title="Custom button" shortcutkey="" disabled="false"></wm-grid-action>
+                <wm-grid-row-action key="customRow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-edit" title="Edit" disabled="false"></wm-grid-row-action>
+                <wm-grid-row-action key="customRow1" display-name="" show="true" class="btn-transparent" iconclass="wi wi-trash" title="Delete" action="Variables.SV_DeleteDept.invoke()" disabled="false"></wm-grid-row-action>
+            </wm-grid>
+            <wm-form errormessage="" captionposition="top" title="Form" enctype="application/x-www-form-urlencoded" method="post" dataset="CreateDeptObjectInvoke" captionalign="left" name="form1" formdata="bind:Widgets.grid1.selecteditem">
+                <wm-layoutgrid columns="1" name="layoutgrid1">
+                    <wm-gridrow name="gridrow1">
+                        <wm-composite name="composite1">
+                            <wm-label class="h4 control-label" caption="RequestBody Details" name="label1"></wm-label>
+                        </wm-composite>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow2">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn1">
+                            <wm-form-field readonly="false" name="RequestBody_budget" displayname="Budget" key="RequestBody.budget" type="integer" show="true" widget="number"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow3">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn2">
+                            <wm-form-field readonly="false" name="RequestBody_deptCode" displayname="Dept Code" key="RequestBody.deptCode" type="string" show="true" widget="text"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow4">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn3">
+                            <wm-form-field readonly="false" name="RequestBody_deptId" displayname="Dept Id" key="RequestBody.deptId" type="integer" show="true" widget="number"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow5">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn4">
+                            <wm-form-field readonly="false" name="RequestBody_location" displayname="Location" key="RequestBody.location" type="string" show="true" widget="text"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow6">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn5">
+                            <wm-form-field readonly="false" name="RequestBody_name" displayname="Name" key="RequestBody.name" type="string" show="true" widget="text"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow7">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn6">
+                            <wm-form-field readonly="false" name="RequestBody_q1" displayname="Q1" key="RequestBody.q1" type="integer" show="true" widget="number"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow8">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn7">
+                            <wm-form-field readonly="false" name="RequestBody_q2" displayname="Q2" key="RequestBody.q2" type="integer" show="true" widget="number"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow9">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn8">
+                            <wm-form-field readonly="false" name="RequestBody_q3" displayname="Q3" key="RequestBody.q3" type="integer" show="true" widget="number"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow10">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn9">
+                            <wm-form-field readonly="false" name="RequestBody_q4" displayname="Q4" key="RequestBody.q4" type="integer" show="true" widget="number"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow11">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn10">
+                            <wm-form-field readonly="false" name="RequestBody_tenantId" displayname="Tenant Id" key="RequestBody.tenantId" type="integer" show="true" widget="number"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow12">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn11">
+                            <wm-grid editmode="inline" navigation="None" key="RequestBody.employees" name="RequestBody.employees" title="Employees">
+                                <wm-grid-action key="addNewRow" display-name="New" iconclass="wi wi-plus" show="true" class="btn-primary" action="addNewRow()" position="footer" shortcutkey=""></wm-grid-action>
+                                <wm-grid-row-action key="updaterow" display-name="" title="Edit" iconclass="wi wi-pencil" show="true" class="btn-transparent" action="editRow()"></wm-grid-row-action>
+                                <wm-grid-row-action key="deleterow" display-name="" title="Delete" iconclass="wi wi-trash" show="true" class="btn-transparent" action="deleteRow()"></wm-grid-row-action>
+                            </wm-grid>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+                <wm-buttongroup horizontalalign="right" class="form-action col-md-12" name="buttongroup1">
+                    <wm-button caption="Reset" type="reset" class="btn-secondary" name="button1"></wm-button>
+                    <wm-button caption="Cancel" type="button" class="btn-warning" name="button2"></wm-button>
+                    <wm-button caption="Save" type="submit" class="btn-primary" name="button3"></wm-button>
+                </wm-buttongroup>
+            </wm-form>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>

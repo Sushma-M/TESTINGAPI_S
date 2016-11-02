@@ -1,0 +1,28 @@
+{
+  "endpointAddress" : "https://www.wavemakeronline.com/run-8r4sy6c58m/TESTINGAPI_S/services/hrdb/Department/count",
+  "method" : "GET",
+  "contentType" : "text/xml",
+  "requestBody" : "",
+  "authType" : "NONE",
+  "headers" : { },
+  "queryParams" : { },
+  "sampleRestResponse" : {
+    "responseBody" : "\"5\"",
+    "convertedResponse" : null,
+    "statusCode" : 200,
+    "responseHeaders" : {
+      "ETag" : [ "\"0e4da3b7fbbce2345d7772b0674a318d5\"" ],
+      "Date" : [ "Tue, 01 Nov 2016 12:50:28 GMT" ],
+      "Content-Length" : [ "1" ],
+      "X-XSS-Protection" : [ "1" ],
+      "Connection" : [ "keep-alive" ],
+      "Content-Type" : [ "application/json;charset=UTF-8" ],
+      "Server" : [ "Apache-Coyote/1.1" ],
+      "mode" : [ "block" ],
+      "Cache-Control" : [ "max-age=0" ]
+    },
+    "contentType" : "application/json",
+    "cookies" : [ ]
+  },
+  "redirectEnabled" : true
+}

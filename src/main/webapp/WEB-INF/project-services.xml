@@ -1,2 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<beans xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd" xmlns="http://www.springframework.org/schema/beans" xmlns:security="http://www.springframework.org/schema/security" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+<beans xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd" xmlns="http://www.springframework.org/schema/beans" xmlns:security="http://www.springframework.org/schema/security" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <import resource="classpath:API_TESTING_DB.spring.xml"/>
+    <import resource="classpath:CreateDeptObject.spring.xml"/>
+    <import resource="classpath:DeleteDeptData.spring.xml"/>
+    <import resource="classpath:DeleteEmp.spring.xml"/>
+    <import resource="classpath:GetAssociatedEmpByMagenerId.spring.xml"/>
+    <import resource="classpath:GetAssociatedEmployees.spring.xml"/>
+    <import resource="classpath:GetCountOfDepts.spring.xml"/>
+    <import resource="classpath:GetDeptData.spring.xml"/>
+    <import resource="classpath:GetDeptDataByDeptCode.spring.xml"/>
+    <import resource="classpath:GetDeptIdForUniqueKey.spring.xml"/>
+    <import resource="classpath:GetEmployeeByUniqueDeptId.spring.xml"/>
+    <import resource="classpath:GetProductDetailsOne2One.spring.xml"/>
+    <import resource="classpath:GetProducts.spring.xml"/>
+    <import resource="classpath:UpdateEmployee.spring.xml"/>
+</beans>

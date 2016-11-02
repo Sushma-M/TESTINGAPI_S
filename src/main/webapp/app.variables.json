@@ -15,6 +15,28 @@
     } ],
     "operation" : "toast"
   },
+  "goToPage_DatagridWithForm" : {
+    "_id" : "wm-goToPage_DatagridWithForm-wm.NavigationVariable-1478065092882",
+    "name" : "goToPage_DatagridWithForm",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "DatagridWithForm",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_Employee" : {
+    "_id" : "wm-goToPage_Employee-wm.NavigationVariable-1478018063102",
+    "name" : "goToPage_Employee",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Employee",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
   "goToPage_Main" : {
     "_id" : "wm-wm.NavigationVariable1389180517517",
     "name" : "goToPage_Main",
@@ -22,6 +44,17 @@
     "category" : "wm.NavigationVariable",
     "operation" : "gotoPage",
     "pageName" : "Main"
+  },
+  "goToPage_Products" : {
+    "_id" : "wm-goToPage_Products-wm.NavigationVariable-1478019963063",
+    "name" : "goToPage_Products",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Products",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
   },
   "supportedLocale" : {
     "_id" : "wm-wm.Variable1402640443182",
